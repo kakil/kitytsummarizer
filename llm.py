@@ -2,6 +2,7 @@ import openai
 import nlpcloud
 import cohere
 import json
+import os
 
 """
 LLMs:
@@ -43,7 +44,7 @@ def llm_generate_text(prompt, service, model):
 
 
 # Open AI Function
-openai.api_key = "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"
+openai.api_key = os.getenv('OPENAI_API_KEY')
 
 
 def openai_generate(user_prompt, selected_model):
@@ -54,7 +55,7 @@ def openai_generate(user_prompt, selected_model):
 
 
 # nlpCloud Function
-nlp_cloud_key = "f17207e55bf7c65f8294e"
+nlp_cloud_key = os.getenv('NLP_CLOUD_KEY')
 
 
 def nlp_cloud_generate(user_prompt, selected_model):
@@ -83,7 +84,7 @@ def nlp_cloud_generate(user_prompt, selected_model):
 
 
 # Cohere API
-cohere_api_key = "fk8B74dEf1DusuFJoi"
+cohere_api_key = os.getenv('COHERE_API_KEY')
 
 
 def cohere_generate(user_prompt, selected_model):

@@ -1,0 +1,29 @@
+name: Access GitHub Secrets in Python
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  access-secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Access GitHub Secrets in Python
+        run: python your_script.py
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          NLP_CLOUD_KEY: ${{ secrets.NLP_CLOUD_KEY }}
+          COHERE_API_KEY: ${{ COHERE_API_KEY }}
+          
