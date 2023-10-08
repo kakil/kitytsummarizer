@@ -43,7 +43,7 @@ def llm_generate_text(prompt, service, model):
 
 
 # Open AI Function
-openai.api_key = "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"
+openai.api_key = "ADD YOUR KEY HERE"
 
 
 def openai_generate(user_prompt, selected_model):
