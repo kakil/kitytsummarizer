@@ -20,6 +20,9 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Run Streamlit app
+        run: streamlit run youtube_summarization_kit.py
+
       - name: Access GitHub Secrets in Python
         run: python your_script.py
         env:
