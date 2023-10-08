@@ -54,7 +54,7 @@ def openai_generate(user_prompt, selected_model):
 
 
 # nlpCloud Function
-nlp_cloud_key = "f17207e55bf7c65f8294e"
+nlp_cloud_key = "YOUR NLP CLOUD KEY HERE"
 
 
 def nlp_cloud_generate(user_prompt, selected_model):
@@ -83,7 +83,7 @@ def nlp_cloud_generate(user_prompt, selected_model):
 
 
 # Cohere API
-cohere_api_key = "fk8B74dEf1DusuFJoi"
+cohere_api_key = "YOUR COHERE API KEY HERE"
 
 
 def cohere_generate(user_prompt, selected_model):
