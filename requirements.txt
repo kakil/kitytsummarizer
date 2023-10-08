@@ -49,7 +49,6 @@ mypy-extensions==1.0.0
 newspaper3k==0.2.8
 nlpcloud==1.1.44
 nltk==3.8.1
-numexpr==2.8.7
 numpy==1.26.0
 openai==0.28.1
 outcome==1.2.0
