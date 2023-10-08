@@ -44,7 +44,7 @@ def llm_generate_text(prompt, service, model):
 
 
 # Open AI Function
-openai.api_key = os.getenv('OPENAI_API_KEY')
+openai.api_key = "ADD YOUR KEY HERE"
 
 
 def openai_generate(user_prompt, selected_model):
@@ -55,7 +55,7 @@ def openai_generate(user_prompt, selected_model):
 
 
 # nlpCloud Function
-nlp_cloud_key = os.getenv('NLP_CLOUD_KEY')
+nlp_cloud_key = "YOUR NLP CLOUD KEY HERE"
 
 
 def nlp_cloud_generate(user_prompt, selected_model):
@@ -84,7 +84,7 @@ def nlp_cloud_generate(user_prompt, selected_model):
 
 
 # Cohere API
-cohere_api_key = os.getenv('COHERE_API_KEY')
+cohere_api_key = "YOUR COHERE API KEY HERE"
 
 
 def cohere_generate(user_prompt, selected_model):
