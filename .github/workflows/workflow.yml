@@ -25,5 +25,5 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           NLP_CLOUD_KEY: ${{ secrets.NLP_CLOUD_KEY }}
-          COHERE_API_KEY: ${{ COHERE_API_KEY }}
-          
+          COHERE_API_KEY: ${{ secrets.COHERE_API_KEY }}
+
