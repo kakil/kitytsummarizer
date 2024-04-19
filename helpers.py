@@ -5,8 +5,10 @@ from langchain.text_splitter import TokenTextSplitter
 import re
 from youtube_transcript_api import YouTubeTranscriptApi
 import requests
+from dotenv import load_dotenv
+import os
 
-
+load_dotenv()
 def estimate_input_cost_optimized(model_name, token_count):
     model_cost_dict = {
         "gpt-3.5-turbo-0613": 0.0015,
@@ -45,9 +47,9 @@ def count_tokens(text, selected_model):
     num_tokens = encoding.encode(text)
     return len(num_tokens)
 
-
-openai.api_key = "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"
-
+print(os.getenv('OPENAI_API_KEY'))
+openai.api_key = os.getenv('OPENAI_API_KEY')
+print(openai.api_key)
 
 def generate_text_with_openai(user_prompt):
     completion = openai.ChatCompletion.create(
@@ -113,8 +115,10 @@ def check_domain_authority(domain):
 
     querystring = {"url": domain}
 
+    rapid_api_key = os.getenv('RAPID_API_KEY')
+
     headers = {
-        "X-RapidAPI-Key": "a617d6467dmshac84323ce581a72p11caa9jsn1adf8bbcbd47",
+        "X-RapidAPI-Key": rapid_api_key,
         "X-RapidAPI-Host": "domain-authority1.p.rapidapi.com",
     }
     response = requests.get(url, headers=headers, params=querystring)
